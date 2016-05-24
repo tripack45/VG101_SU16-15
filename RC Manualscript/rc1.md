@@ -3,7 +3,7 @@
  
  Covering Chap 0: Intro, Chap 1 Arrays, Chap2. Control Flow;
  
- Source file of this file see [github.com: tripack45/VG101_SU16-15](a.txt)
+ Source file of this file see [github.com: tripack45/VG101_SU16-15](https://github.com/tripack45/VG101_SU16-15/blob/master/RC%20Manualscript/rc1.md)
  
 # Section 1: Basic Section (45 mins)
 
