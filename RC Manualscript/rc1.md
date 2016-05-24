@@ -12,25 +12,25 @@
    
 ## Homework:
    * What should you hand in, how to hand in
-        * See Annoucement.
+     * See Annoucement.
    * Do Not Copy Principal, honor console violation, judging fo homework.
    * Be careful of special cases
-        * Things like dividing by zero, Number of roots of a `ax^2 + bx + c = 0` equation.
+     * Things like dividing by zero, Number of roots of a `ax^2 + bx + c = 0` equation.
    
 ## README:
    * Describe the algorithm. Decribe the form of input. Describe expected output.
    
 ## Know the environment:
    * Turn Your Matlab Into English
-        * 『首选项』=>『常规』=>『桌面语言』=>『英语』, 重启 Matlab。
+     * 『首选项』=>『常规』=>『桌面语言』=>『英语』, 重启 Matlab。
    * Know the workspace, the command window, the editor, the menu. (And how to dock them);
    * Know the `PATH` variable.
-        * A variable stores places that Matlab searches through to find your scripts and funcitons.
-        * Know how to add directory to `PATH` or change it to someplace
+     * A variable stores places that Matlab searches through to find your scripts and funcitons.
+     * Know how to add directory to `PATH` or change it to someplace
    * `.m` files are files that contains Matlab code. 
-        * Could be a `script` or a `function`
-        * `script` is a collection of code that runs one by one. Think of a scripth as a package of frequently used code.
-        * `functions` will be discuss in the future
+     * Could be a `script` or a `function`
+     * `script` is a collection of code that runs one by one. Think of a scripth as a package of frequently used code.
+     * `functions` will be discuss in the future
    * Learn to read error message!
    * Semicolumns are end of an expression(which becomes a statement). One statement per line.
    * Strings ("text") are put in `''`
@@ -47,40 +47,40 @@
 ## Building blocks: Array and Matricies:
    * Arrays(Matrix) is huge table of numbers. i.e. numbers arranged in the form of rows and columns.
    * (Almost) every thing in Matlab is an array (matrix). 
-        * Terms `Array` and `Matrix` usually means the same, given the dimension is less or equal then 2.
-        * Array: "数组，阵列". Matrix: "矩阵"
-        * A single number, or in other words, a scalar, is an 1 by 1 array.
+     * Terms `Array` and `Matrix` usually means the same, given the dimension is less or equal then 2.
+     * Array: "数组，阵列". Matrix: "矩阵"
+     * A single number, or in other words, a scalar, is an 1 by 1 array.
    * A one dimensional array is often called a "Vector", depending on if it is a row or a column, we call it "row vector" or "column vector".
    * `[]` operator "glues" arrays together. 
-        * `[A, B]` or `[A B]` glues `B` to the left of `A` (Horizontally).
-        * `[A; B]` glues `B` under `A` (Vertically).
-        * Possible to use this on more then 1 matrix.
+     * `[A, B]` or `[A B]` glues `B` to the left of `A` (Horizontally).
+     * `[A; B]` glues `B` under `A` (Vertically).
+     * Possible to use this on more then 1 matrix.
    * Use `a:b:c` expression to genrate a row of numbers, starting from `a` to `c`, one every `b` numbers:
-        * No need to write `[a:b:c]`
-        * `1 : 2: 10` becomes `[1 3 5 7 9]`
-        * `5 :-1: 2` becomes `[5,4,3,2,1]`
+     * No need to write `[a:b:c]`
+     * `1 : 2: 10` becomes `[1 3 5 7 9]`
+     * `5 :-1: 2` becomes `[5,4,3,2,1]`
    * Use `linespace(start,end,n)` to generate `n` evenly distributed numbers on the interval `[start,end]`
    * Use `zero(row,column)` or `ones(row,column)` to gnerate arrays of zeros(ones) of size "row by column"
    * Use `magic(n)` to generator n by n "random" matrix.
    * Matrix Operators:
-        * Plus(`+`), Minus(`-`), Matrix Multiplication(`*`), Matrix Division(`/`), Transpose(`'`)
-        * Element by element multiplication (`.*`) and division(`./`) and power (`.^`)
-        * No "Element by element transpose"
-        * For scalars(Numbers, 1 by 1 matrix), (`*`) and (`.*`) are essentailly the same. Also true for (`./`) and (`/`)
+     * Plus(`+`), Minus(`-`), Matrix Multiplication(`*`), Matrix Division(`/`), Transpose(`'`)
+     * Element by element multiplication (`.*`) and division(`./`) and power (`.^`)
+     * No "Element by element transpose"
+     * For scalars(Numbers, 1 by 1 matrix), (`*`) and (`.*`) are essentailly the same. Also true for (`./`) and (`/`)
    * `numel(n)` counts the number of elements
    * Pay attention to the behavior of `sum(),mean(), ...` functions
    
 ## Accessing Elements of a matrix:
    * 3 Ways of doing so: 
-       * By linear indexing. Counting from the first column then second....
-       * By specifying the subscript `A(row,column)` access the element on `row` row and `column` column. **Notice the order of row and solumn**.
-       * By logical masks. Talks about in future.
+    * By linear indexing. Counting from the first column then second....
+    * By specifying the subscript `A(row,column)` access the element on `row` row and `column` column. Notice the order of row and solumn.
+    * By logical masks. Talks about in future.
    * `:` symbol means "all possible values"
    * `end` symbol means last possible values
-       * It is possible to append to a one dimensional array `B` by doing `B(end+1) = 1;`
+    * It is possible to append to a one dimensional array `B` by doing `B(end+1) = 1;`
    * Possible to access multiple by specifying the argument as an array
-       * If `A=magic(5)`, **be careful with the difference of `A([1,3,4])` and `A([1;3;4])`
-       * `A(:)` will always return a column vector with all the elements of `A` inside it. Good for `sum()`
+    * If `A=magic(5)`, **be careful with the difference of `A([1,3,4])` and `A([1;3;4])`
+    * `A(:)` will always return a column vector with all the elements of `A` inside it. Good for `sum()`
    
 ## Boolean logic and relational operators
    * These things all returns(calculate out as) `true` or `false`.
@@ -88,7 +88,7 @@
    * Know the symbol for "larger, equals, not equals ...."
 
 ## Conditional Statements (If):
-   ```matlab
+```matlab
     % Code                    % English
     if expression1            % If the "expression1" is true (evaluates to be true)
         statement1            %    Please run "statments1".
@@ -101,17 +101,19 @@
     else                      % If none of above satisfies, 
         statements            %    Run "Statments"
     end
-    ```
+```
     
    * the "elseif"s and "else" appears only when needed. i.e. They are optional
    * Be familiar with the grammar! 
    * Read (And write!) your code as if you are writing English!
-       >  Any fool can write code that a computer can understand. Good programmers write code that humans can understand. ~Martin Fowler 
+  
+       >   Any fool can write code that a computer can understand. Good programmers write code that humans can understand.        ~Martin Fowler 
+
    * Pay attention to the indentation.
    * Rhy Wiskey
     
 ## Conditional Statements (Switch):
-   ```matlab
+```matlab
     % Code                    %English
     switch variable           % Please check "variable" against the "value1" to "valuen"
         case value1
@@ -124,7 +126,7 @@
         otherwise             % If none of them satisfies,
             statements             % Run "Statements"
     end
-   ```
+```
     
    * The "otherweise" part is optional.
    * Notice that the "value"s can be strings, things like `'abc'`
@@ -133,7 +135,7 @@
        * `switch` statement automatically compares strings without you calling `strcmp()`
         
 ## Loops (`for` loop and `while` loop):
-   ```matlab
+```matlab
    % Code                                % English
    for i = start : increment : end       % Let i increase(decrease) from "start" to "end', change "increment" every time
         statemnts                        % Do something
@@ -142,7 +144,7 @@
    while expression                      % While expression is satisfied
         statements                       %     Keep doing statements.
    end
-   ``` 
+``` 
    
    * For loops mostly used when you know how many times to loop over
    * Be careful with infinite loops when using while loops. (A never ending loop).
@@ -227,13 +229,13 @@
 ## Pitfalls regarding logical expressions:
    * `true` is intepreted as number "1" in calculation. 
        * `false` as zero
-       * ```matlab
+ ```matlab
          a = true; 
          b = true;
          disp(a+b); % displays 2
-         ```
+ ```
    * Any number **other then zero** will be regarded by matlab as `true`
-       * ```matlab
+```matlab
          a = 1;
          b = -2;
          if a
@@ -242,13 +244,13 @@
          if b
             disp(`-2 means true'); % -2 also means true;
          end
-        ```
+```
    
 ## More about loops:
    * Rewriting for loops with while loops.
    * What exactly is happening inside a `for` loop?
         * will the two code behave the same?
-        ```matlab
+```matlab
            % ===============
            for i = 1 : 5
               disp(i);
@@ -258,7 +260,7 @@
            for i = vector
               disp(i);
            end
-        ```
+ ```
   * For loops can always be rewritten by while loops, while keep them?
  
 ## How many ways of summing all elements in an matrix:
