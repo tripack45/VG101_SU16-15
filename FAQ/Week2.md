@@ -8,7 +8,7 @@ A：提示用户输入一个数字:
 A: No, deducution due to performance issues, as long as the code does not takes centuries to finish.
 Performance is not what will judge you by. But faster and cleaner code will earn you extra points. We provoke thinking and trying.
 
-### Q: What "xor" called "exclusive or".
+### Q: Why "xor" called "exclusive or".
 A: Because "exclusive or" is considered an variation of "or" that excludes the case where two input are both one. 
 Essentially "xor" return true if both input are different, false if they are the same.
 
