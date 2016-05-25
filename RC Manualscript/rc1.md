@@ -173,14 +173,14 @@
         * No space after brackets.
         * No space after unary operators. (operator applies only to one variable)
    * Sample code:
-   ```matlab
+```matlab
    if isReachedBottom(author) || isCameUp(author)
         ocean = ~whiskey;
         disp('I am not a duck'); % I SHALL NOT BE A duck
    else
         if hasLuck(author) || hasCards(author)
             ocean = wiskey;
-            disp('Now I'm a duck');
+            disp('Now I am a duck');
         end
    end
    for whiskey = firstWhiskey : lastWhiskey
@@ -189,7 +189,7 @@
    while isAlive(author)
         authorGet(whiskey);
    end
-   ```
+```
         
 ## Know your instructor's Environment:
    * A black box, called "Command Line"
