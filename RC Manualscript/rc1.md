@@ -77,7 +77,7 @@
    * `:` symbol means "all possible values"
    * `end` symbol means last possible values
     * It is possible to append to a one dimensional array `B` by doing `B(end+1) = 1;`
-   * Possible to access multiple by specifying the argument as an array
+   * Possible to access multiple elements by specifying the argument as an array
     * If `A=magic(5)`, **be careful with the difference of `A([1,3,4])` and `A([1;3;4])`
     * `A(:)` will always return a column vector with all the elements of `A` inside it. Good for `sum()`
    
@@ -174,7 +174,21 @@
         * No space after unary operators. (operator applies only to one variable)
    * Sample code:
    ```matlab
-   
+   if isReachedBottom(author) || isCameUp(author)
+        ocean = ~whiskey;
+        disp('I am not a duck'); % I SHALL NOT BE A duck
+   else
+        if hasLuck(author) || hasCards(author)
+            ocean = wiskey;
+            disp('Now I'm a duck');
+        end
+   end
+   for whiskey = firstWhiskey : lastWhiskey
+        authorCry(whiskey);
+   end
+   while isAlive(author)
+        authorGet(whiskey);
+   end
    ```
         
 ## Know your instructor's Environment:
