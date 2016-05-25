@@ -236,3 +236,5 @@
    * Take away: Fast/Efficient code usually means make best use of language features.
         
             
+## Basic debugging
+    * Use of debugging tools
