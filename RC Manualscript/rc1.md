@@ -28,7 +28,7 @@
      * 『首选项』=>『常规』=>『桌面语言』=>『英语』, 重启 Matlab。
    * Know the workspace, the command window, the editor, the menu. (And how to dock them);
    * Know the `PATH` variable.
-     * A variable stores places that Matlab searches through to find your scripts and funcitons.
+     * A variable stores places that Matlab searches through to find your scripts and functions.
      * Know how to add directory to `PATH` or change it to someplace
    * `.m` files are files that contains Matlab code. 
      * Could be a `script` or a `function`
@@ -60,8 +60,8 @@
      * Possible to use this on more then 1 matrix.
    * Use `a:b:c` expression to genrate a row of numbers, starting from `a` to `c`, one every `b` numbers:
      * No need to write `[a:b:c]`
-     * `1 : 2: 10` becomes `[1 3 5 7 9]`
-     * `5 :-1: 2` becomes `[5,4,3,2,1]`
+     * `1 : 2 : 10` becomes `[1 3 5 7 9]`
+     * `5 : -1 : 2` becomes `[5,4,3,2]`
    * Use `linespace(start,end,n)` to generate `n` evenly distributed numbers on the interval `[start,end]`
    * Use `zero(row,column)` or `ones(row,column)` to gnerate arrays of zeros(ones) of size "row by column"
    * Use `magic(n)` to generator n by n "random" matrix.
@@ -90,7 +90,7 @@
    * Know the meaning of logical "AND" "OR" "NOT" and their symbols.
    * Know the symbol for "larger, equals, not equals ...."
 
-## Conditional Statements (If):
+## Conditional Statements (`if`):
 ```matlab
     % Code                    % English
     if expression1            % If the "expression1" is true (evaluates to be true)
@@ -115,7 +115,7 @@
    * Pay attention to the indentation.
    * Rhy Wiskey
     
-## Conditional Statements (Switch):
+## Conditional Statements (`switch`):
 ```matlab
     % Code                    %English
     switch variable           % Please check "variable" against the "value1" to "valuen"
@@ -211,14 +211,14 @@
  ```
    * Any number **other then zero** will be regarded by matlab as `true`
 ```matlab
-         a = 1;
-         b = -2;
-         if a
-            disp('1 means true'); % 1 means true;
-         end
-         if b
-            disp(`-2 means true'); % -2 also means true;
-         end
+a = 1;
+b = -2;
+if a
+   disp('1 means true'); % 1 means true
+end
+if b
+  disp('-2 means true'); % -2 also means true
+end
 ```
    
 ## More about loops:
