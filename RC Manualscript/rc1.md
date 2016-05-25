@@ -159,28 +159,28 @@
 ## Coding Styles:
    Guidelines to follow if you want clean code, not mandatory!!
    * Constants:
-        * No magic numbers, always factor out constants
-        * Name them properly.
+     * No magic numbers, always factor out constants
+     * Name them properly.
    * Nameing:
-        * Use  `smallCaseCamel` method on variables and functions.
-        * Use meaningful English! Avoid unsual acrynom.
-        * e.g. `numberOfStudents = 10;`, `getPresentFrom(myClassmate)`
+     * Use  `smallCaseCamel` method on variables and functions.
+     * Use meaningful English! Avoid unsual acrynom.
+     * e.g. `numberOfStudents = 10;`, `getPresentFrom(myClassmate)`
    * Indentation:
-        * Use "smart indent" in matlab.
+     * Use "smart indent" in matlab.
    * Spacing: 
-        * Space between operators. (Such as `+,-,=,==,>=`);
-        * Space after a comma. (`ones(1, 2, 4);`)
-        * No space after brackets.
-        * No space after unary operators. (operator applies only to one variable)
+     * Space between operators. (Such as `+,-,=,==,>=`);
+     * Space after a comma. (`ones(1, 2, 4);`)
+     * No space after brackets.
+     * No space after unary operators. (operator applies only to one variable)
    * Sample code:
-   ```matlab
+```matlab
    if isReachedBottom(author) || isCameUp(author)
         ocean = ~whiskey;
         disp('I am not a duck'); % I SHALL NOT BE A duck
    else
         if hasLuck(author) || hasCards(author)
             ocean = wiskey;
-            disp('Now I'm a duck');
+            disp('Now I am a duck');
         end
    end
    for whiskey = firstWhiskey : lastWhiskey
@@ -189,17 +189,17 @@
    while isAlive(author)
         authorGet(whiskey);
    end
-   ```
+```
         
 ## Know your instructor's Environment:
    * A black box, called "Command Line"
    * A `linux` environment
-        * Linus travolds. 
+     * Linus travolds. 
 
 
 ## Pitfalls regarding logical expressions:
    * `true` is intepreted as number "1" in calculation. 
-       * `false` as zero
+     * `false` as zero
  ```matlab
          a = true; 
          b = true;
@@ -220,7 +220,7 @@
 ## More about loops:
    * Rewriting for loops with while loops.
    * What exactly is happening inside a `for` loop?
-        * will the two code behave the same?
+     * will the two code behave the same?
 ```matlab
            % ===============
            for i = 1 : 5
@@ -236,17 +236,17 @@
  
 ## How many ways of summing all elements in an matrix:
    * Basic style:
-        * For loop on row and columns
+     * For loop on row and columns
    * Improved style:
-        * While loop using linear indexing
+     * While loop using linear indexing
    * Advanced style:
-        * Make use of `sum()`
+     * Make use of `sum()`
    * Best practive:
-        * `sum(A(:))`
-        * Good, because it works regrardless of dimension.
-        * Good, uses vectorized loop.
-        * Good, no room for mistakes.
-        * Bad, will never work without Matlab. Impossible to translate into another language.
+     * `sum(A(:))`
+     * Good, because it works regrardless of dimension.
+     * Good, uses vectorized loop.
+     * Good, no room for mistakes.
+     * Bad, will never work without Matlab. Impossible to translate into another language.
    * Take away: Fast/Efficient code usually means make best use of language features.
         
             
