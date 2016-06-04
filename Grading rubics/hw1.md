@@ -51,6 +51,7 @@ For each question:
     * Adjust according to readme
 * For each question, deduction capped at -4 poinst.
 * Generate random integers, not real numbers in Q2 : -2 points.
+* Wrongly typed the number in Q1 : -1 points.
 * No deduction for people who write: 
 ```
 (rand * 9 + 1) * (rand * 9 + 1) * (rand * 9 + 1) * (rand * 9 + 1) * (rand * 9 + 1)
