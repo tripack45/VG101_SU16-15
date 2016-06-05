@@ -25,6 +25,10 @@
   * Fail to calculate correct remainning meters (WA): -4 points.
   * Fail to calculate correct remainning meters when no meters remainning(WA): -4 points  
 * Fail to correctly return integer value of laps: -4 points.
+* Other notes:
+  * With input 800, answer "2 and 0" and "2" will both recieve full credit.
+    * This is because the problem does not state whether the remaining meters should be droped.
+    * But "2 and 400" will recieve -4. We believe it's clearly implied "tbere is no remaining meters" in this case.
 
 ## Ex3.
 * Following capped at -5 points:
