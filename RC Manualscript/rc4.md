@@ -41,7 +41,7 @@ Above we introduce the traditional "Editor + Compiler" environment.
  A good IDE provides insight into your code, help the programmer by providing suggestions,
 and detects potential mistakes in the code. 
 
-**We suggest new comers start with an IDE. **
+**We suggest new comers start with an IDE.**
 
 ## Installing the compiler:
 
@@ -69,7 +69,7 @@ gcc source1.c source2.c source3.c -o output_filename
 
 Details of compiling commands will be demonstrated on Friday's Lab/RC (Jun 17.)
 
-** You can include the complie command in your README. Do this especially if your code require special compile command**
+**You can include the complie command in your README. Do this especially if your code require special compile command**
 
 Extra note: for studentw who know about "C Standards" (no worry if you don't), this course allow use features from 2011 standard. 
 
