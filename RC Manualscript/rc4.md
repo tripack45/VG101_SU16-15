@@ -9,6 +9,9 @@ Situation is somewhat complicated due to Apple Inc. :-).
 Skip the part if you are not interested. 
 But these knowledge are essential if you want to understand what you are doing.
 
+Unlike Matlab, C/C++ are compiled language. Meaning their code (code is text) need to be translated (compiled)
+into executable files (binary files, just seriers menaningless numbers, at least meaningless for most human).
+
 C/C++ are compiled languages. Meaning, the general way of writing and executing a C program, is
 
 1. Write a C program in a text file (or a collection of files), call this file a "source" file.
@@ -54,7 +57,9 @@ For students using Windows, you are about to do download and install `TDM-GCC`, 
 If your intallation is successful, the last line of output should be like(minor difference possible):
 ```
 gcc version 5.1.0 <tdm32-1>
+
 ```
+![gcc_v](gcc.png)
 
 If your compilation is successful, you should be able to compile a C program with command like:
 
@@ -72,6 +77,8 @@ Details of compiling commands will be demonstrated on Friday's Lab/RC (Jun 17.)
 Text editor are fast, lightweight. However to use them conveniently, you need to do more work.
 
 ### Sublime Text 2
+![sublime](sublime.png)
+
 It's Zhang Yuni and Wang ZiJian's choice. 
 
 It's a commercial software. It's latest version is Sublime Text 3. The latest version cost money.
@@ -85,6 +92,7 @@ The software is easy to use out of the box.
 This sofware provides much advanced functionality to dramatically speed up coding.
 
 ### Visual Studio Code
+![VS Code](vscode.png)
 
 First things first, **VS Code** is not Visual Studio! This tool is my favourite editor.
  
@@ -115,6 +123,7 @@ Due to various reasons.
 IDEs are heavy weight. They are easy to use out-of the box. However the cost is they are much slower.
 
 ### Clion
+![code::blocks](clion.png)
 
 It's my personal favourite. It'a commercial software from a company called JetBrains.
  Students with SJTU email-address can apply for a free liscense easily.
@@ -137,6 +146,7 @@ location of your program directory.
 Contact us if you don't know how to use the software.
 
 ### Code::Blocks
+![code::blocks](cb.png)
 
 **Attentiion: The IDE comes with its own gcc. No need to install another one**
 
