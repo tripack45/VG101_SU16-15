@@ -1,5 +1,9 @@
 # C/C++ Environment Setup Guide
 
+NOTE: students using Mac OS should go to Yuni for help.
+
+Situation is somewhat complicated due to Apple Inc. :-).
+
 ## Background knowledge
 
 Skip the part if you are not interested. 
@@ -34,7 +38,7 @@ Above we introduce the traditional "Editor + Compiler" environment.
  A good IDE provides insight into your code, help the programmer by providing suggestions,
 and detects potential mistakes in the code. 
 
-We suggest students start with this choice.
+**We suggest new comers start with an IDE. **
 
 ## Installing the compiler:
 
@@ -52,6 +56,14 @@ If your intallation is successful, the last line of output should be like(minor 
 gcc version 5.1.0 <tdm32-1>
 ```
 
+If your compilation is successful, you should be able to compile a C program with command like:
+
+```
+gcc source1.c source2.c source3.c -o output_filename
+```
+
+Details of compiling commands will be demonstrated on Friday's Lab/RC (Jun 17.)
+
 (Mac OSX) Please contact your TA "Yuni Zhang" for help. 
 
 (Linux) Please contact any one of your TA for help.
@@ -59,9 +71,40 @@ gcc version 5.1.0 <tdm32-1>
 ## Option 1, Using a text editor:
 Text editor are fast, lightweight. However to use them conveniently, you need to do more work.
 
+### Sublime Text 2
+It's Zhang Yuni and Wang ZiJian's choice. 
+
+It's a commercial software. It's latest version is Sublime Text 3. The latest version cost money.
+
+So we suggest you use Sublime Text 2. The difference between the two versions are not so important.
+
+It's official website is [here](https://www.sublimetext.com/)
+
+The software is easy to use out of the box. 
+
+This sofware provides much advanced functionality to dramatically speed up coding.
+
+### Visual Studio Code
+
+First things first, **VS Code** is not Visual Studio! This tool is my favourite editor.
+ 
+It's a very recent choice. It's free, open source and cross platform.
+
+You can find its official website [here](https://code.visualstudio.com/)
+
+It's super fast (faster than Sublime! Main reason I use it), with the cost of less plugin support.
+
+It's also easy to use out of the box.
+
+### Notepad++ 
+
+On Windows another tool is notepad++. We will not go into that. 
+
 ## Option 2, Using an IDE
 
-Due to various reasons. **Microsoft Visual Studio is strictly PROHIBITED**
+Due to various reasons.
+
+ **Microsoft Visual Studio is strictly PROHIBITED**
 
 **DO NOT USE MS VISUAL STUDIO**
 
@@ -85,6 +128,14 @@ You will need to regester for your JetBrains Account also on the official websit
 
 Note that this IDE also works for Linux and Mac.
 
+After you have installed it, you need to tell it where your `gcc` is installed. Once you tell it the location,
+the software will take care of the rest. **Do not use path with Chinese characters** when you set up your
+location of your program directory. 
+
+**DO NOT USE PATH WITH CHINESE CHARACTERS!**
+
+Contact us if you don't know how to use the software.
+
 ### Code::Blocks
 
 **Attentiion: The IDE comes with its own gcc. No need to install another one**
@@ -98,4 +149,31 @@ It's official download page is [here](http://www.codeblocks.org/downloads/26).
 For windows users remember to download the one `codeblocks-16.01mingw-setup.exe`. 
 It comes with its own compiler.
 
+## OK? So many choices, how to choose from?
 
+The argument of whether text editors are better then IDE has always been there, 
+since the first IDE existed. Some may argue "good programers" always use text editors. 
+
+This is simply not true.
+
+Programmers choose the most suitable tool for thier job. The baseline is, good programmers 
+always write good programs, no matter what tool they use.
+
+Using text editors and manually compile it may feel "cool" to some of you. Well, refuse to use better
+tools when available is not cool, right?
+
+For starters, we really suggest you start by using IDEs. IDEs really understands your code. Meaning it understands
+your code as a piece of code, in contrast to treat it like a bunch of text. The latter is what most text editors does.
+
+The main characteristic between text editors and IDEs are:
+* IDEs tends to be slowre.
+* IDEs are larger in size.
+* IDEs requires some time to get familiar
+* IDEs provide better functionality out of the box
+ * Meaning it can reduce the amount of memorization, good for starters
+ * Meaning it can reduce mistkakes! Another reason good for starters.
+* Text editors are fast.
+* Text editors are small in size.
+* Text editors provides basic functions.
+* Text editors require more user work be become handy.
+* Text editors are free. More flexibility to change.
