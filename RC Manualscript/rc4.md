@@ -10,7 +10,7 @@ Skip the part if you are not interested.
 But these knowledge are essential if you want to understand what you are doing.
 
 Unlike Matlab, C/C++ are compiled language. Meaning their code (code is text) need to be translated (compiled)
-into executable files (binary files, just seriers menaningless numbers, at least meaningless for most human).
+into executable files (binary files, just series meaningless numbers, at least meaningless for most human).
 
 C/C++ are compiled languages. Meaning, the general way of writing and executing a C program, is
 
@@ -23,7 +23,7 @@ You are expected to know these three steps.
 So basically, to set up the C environment is to the following 2 things:
 
 1. You need a text editor to edit text file. 
-2. You need a compiler so when you are editing, use it to compile the file.
+2. You need a compiler so when you are done editing, use it to compile the file.
 
 So you just pick one editor from a bunch of choices, then install the compiler. Then you are good.
 
@@ -54,7 +54,7 @@ For students using Windows, you are about to do download and install `TDM-GCC`, 
 * Install, by keep clicking "continue".
 * Verify if you installed it correctly, by running `gcc -v` in `cmd`.
 
-If your intallation is successful, the last line of output should be like(minor difference possible):
+If your installation is successful, the last line of output should be like(minor difference possible):
 ```
 gcc version 5.1.0 <tdm32-1>
 
@@ -69,11 +69,11 @@ gcc source1.c source2.c source3.c -o output_filename
 
 Details of compiling commands will be demonstrated on Friday's Lab/RC (Jun 17.)
 
-**You can include the complie command in your README. Do this especially if your code require special compile command**
+**You can include the compile command in your README. Do this especially if your code require special compile command**
 
-Extra note: for studentw who know about "C Standards" (no worry if you don't), this course allow use features from 2011 standard. 
+Extra note: for students who know about "C Standards" (no worry if you don't), this course allow use features from 2011 standard. 
 
-(Mac OSX) Please contact your TA "Yuni Zhang" for help. 
+(Mac OS) Please contact your TA "Yuni Zhang" for help. 
 
 (Linux) Please contact any one of your TA for help.
 
@@ -83,7 +83,7 @@ Text editor are fast, lightweight. However to use them conveniently, you need to
 ### Sublime Text 2
 ![sublime](sublime.png)
 
-It's Zhang Yuni and Wang ZiJian's choice. 
+It's Zhang Yuni and Wang Zijian's choice. 
 
 It's a commercial software. It's latest version is Sublime Text 3. The latest version cost money.
 
@@ -93,7 +93,7 @@ It's official website is [here](https://www.sublimetext.com/)
 
 The software is easy to use out of the box. 
 
-This sofware provides much advanced functionality to dramatically speed up coding.
+This software provides much advanced functionality to dramatically speed up coding.
 
 ### Visual Studio Code
 ![VS Code](vscode.png)
@@ -129,15 +129,15 @@ IDEs are heavy weight. They are easy to use out-of the box. However the cost is 
 ### Clion
 ![code::blocks](clion.png)
 
-It's my personal favourite. It'a commercial software from a company called JetBrains.
- Students with SJTU email-address can apply for a free liscense easily.
+It's my personal favourite. It's a commercial software from a company called JetBrains.
+ Students with SJTU email-address can apply for a free license easily.
 
 It is arguably the most powerful IDE at this time. Unlike many other IDEs, it actually tries to understand
 your code, other then seeing them as texts. 
 
 Here is its [Official Website](https://www.jetbrains.com/clion/). 
-After installing the sofware you will need to inform it where your "gcc" is.
-You will need to regester for your JetBrains Account also on the official website for the free lisence.
+After installing the software you will need tell it where your "gcc" is.
+You will need to register for your JetBrains Account also on the official website for the free license.
 
 Note that this IDE also works for Linux and Mac.
 
@@ -146,6 +146,8 @@ the software will take care of the rest. **Do not use path with Chinese characte
 location of your program directory. 
 
 **DO NOT USE PATH WITH CHINESE CHARACTERS!**
+
+Update: To get a student license, please visit [JetBrains Student](https://www.jetbrains.com/student/)
 
 Contact us if you don't know how to use the software.
 
@@ -166,11 +168,11 @@ It comes with its own compiler.
 ## OK? So many choices, how to choose from?
 
 The argument of whether text editors are better then IDE has always been there, 
-since the first IDE existed. Some may argue "good programers" always use text editors. 
+since the first IDE existed. Some may argue "good programmers" always use text editors. 
 
 This is simply not true.
 
-Programmers choose the most suitable tool for thier job. The baseline is, good programmers 
+Programmers choose the most suitable tool for their job. The baseline is, good programmers 
 always write good programs, no matter what tool they use.
 
 Using text editors and manually compile it may feel "cool" to some of you. Well, refuse to use better
@@ -180,14 +182,14 @@ For starters, we really suggest you start by using IDEs. IDEs really understands
 your code as a piece of code, in contrast to treat it like a bunch of text. The latter is what most text editors does.
 
 The main characteristic between text editors and IDEs are:
-* IDEs tends to be slowre.
+* IDEs tends to be slower.
 * IDEs are larger in size.
 * IDEs requires some time to get familiar
-* IDEs provide better functionality out of the box
- * Meaning it can reduce the amount of memorization, good for starters
- * Meaning it can reduce mistkakes! Another reason good for starters.
+* IDEs offer better functionality out of the box
+ * Meaning it can cut the amount of memorization, good for starters
+ * Meaning it can cut mistakes! Another reason good for starters.
 * Text editors are fast.
-* Text editors are small in size.
+* Text editors are smaller.
 * Text editors provides basic functions.
 * Text editors require more user work be become handy.
 * Text editors are free. More flexibility to change.
