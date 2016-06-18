@@ -1,0 +1,46 @@
+README
+
+Author: VG101 SU16 TA_Group
+Date  : June 18, 2016
+
+This is a template for students to complete your homework.
+You should follow the instructions carefully.
+Failing to do so WILL lead to deduciton.
+The graceful period has past, guys and girls.
+This file is also a sample README for you.
+
+USAGE:
+First, READ THE CODE!
+Write your corresponding exercise in ex1.c, ex2.c, etc.
+Each file contains functions for the corresponding assignment.
+These source file should always include "assignment.h"
+Declare the function for your exercise in "assignment.h"
+If the assignment contains less then 4 exercises,
+Delete extra file. (And declaration in "assignment.h")
+
+COMPILING:
+For command line, run 
+
+gcc -Wall main.c ex1.c ex2.c ex3.c ex4.c -o out
+
+For IDE users:
+
+CLion users please see CLion Usage guide.
+Code::Blocks users look for "Add files" in the menu.
+Mac OS users please find Yuni
+
+RUNNING
+Run your ouptut executable. Either (in command line) with
+
+out.ext -exi
+
+For exercise i, or (For IDEs) click "Run" then input the exercise number
+(an integer) into program to run a specific exercise.
+
+Extra information:
+Keep assignment source files named in this form.
+Meaning:
+1) Readme file should be "README", no file extention, all case letter.
+2) Each exercise named as "exi.c". all lower case letters.
+3) Normally, upload source file ONLY. In rare cases if you need to upload something 
+   that is not a source file. Clearly state that in your README!
