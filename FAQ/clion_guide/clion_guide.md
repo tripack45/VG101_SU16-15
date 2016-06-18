@@ -2,7 +2,7 @@
 
 This guide tell you about basic usage of Clion. 
 
-If you cannot see the pictures clearly, try to goto [this page]()
+If you cannot see the pictures clearly, try to goto [this page](https://github.com/tripack45/VG101_SU16-15/blob/master/FAQ/clion_guide/clion_guide.md)
 
 Before you start this guide, make sure you have 
 
@@ -29,7 +29,7 @@ If you follow the instruction. The default dir should be (Mine is a little bit d
 C:\TDM-GCC-32
 ```
 
-![gcc_dir](gcc_dir.png)
+![gcc_dir](gcc_dir.PNG)
 
 * Wait some time for the software to verify your choice of location.
 
@@ -42,7 +42,7 @@ You have sucessfully set up `gcc`
 * Click new project on the welcome screen. Enter your project name and place. Click OK. 
 
   **You must choose a place that does not contain non-english character in its path!**
-![new_proj](new_proj.png)
+![new_proj](new_proj.PNG)
 
 * You will see a screen like this. Notice the words and progress bar in the red box.
   
