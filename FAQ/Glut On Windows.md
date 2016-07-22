@@ -19,6 +19,7 @@ For students using MacOS, please seek help from Yuni.
 # General Procedure
 
 ### Acquiring library files:
+  * You can download the file from the official website, [here](https://www.opengl.org/resources/libraries/glut/glutdlls37beta.zip)
   * Get them from the announcement, or
   * Get them from the QQ group
 
