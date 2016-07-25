@@ -33,7 +33,7 @@ Run `gcc -v` in command line, check the **last line** in your output, you should
 gcc version 5.1.0 <tdm-1>
 ```
 
-Check the whats inside `<>`, if it's not `<tdm64-1>`, then we are fine, you can safely skip the 64-bit section. If otherwise, read through both section, **Do not do anything for now.**. 
+Check the whats inside `<>`, if it's `<tdm-1>`, **not `<tdm64-1>`**, then we are fine, you can safely skip the 64-bit section. If otherwise, read through both section, **Do not do anything for now.**. 
 
 If this command does not work, and you are using `Code::Blocks`. 
 
