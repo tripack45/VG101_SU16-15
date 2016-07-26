@@ -176,7 +176,7 @@ C:\TDM-GCC-64\x86_64-w64-mingw32\lib32
 When compiling a programme, add `-m32` flag into compiler to force the compiler generate 32-bit programme. The compiling command for the sample programme will be:
 
 ```
-g++ -std=c++11 -m32 -pedantic -Wall sample.cpp -lopengl32 -glut32 -lglu32
+g++ -std=c++11 -m32 -pedantic -Wall sample.cpp -lopengl32 -lglut32 -lglu32
 ```
 
 Also the library directives must come last.
