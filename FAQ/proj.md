@@ -1,114 +1,76 @@
-# Project part 2 specs:
+# FAQs on Project:
 
-## The immutable Vector class:
-The modelling of graphical objects consits modelling concepts such as location, movement, etc. The mathematial background that builds up these objects is the notion of "Vectors". 
+* This document will be updated in realtime [here](https://github.com/tripack45/VG101_SU16-15/blob/master/FAQ/proj.md)
+* PDF version on SAKAI will be updated on a daily basis
 
-In this part, we try to implement a Vector class `Vec`. We want this "Vector" to be an imuttable, meaning the attributes of Vector, once initialized, is not allowed to change. This corresponds to the mathematical "variable".
+FAQs (Frequently asked questions) are document provided with programs to answer common confusions. We suggest each team pick at least one students in charge of reading this document carefully, and make sure that everything mentioned is well-understood by the team. This will ease your work, provide inspirations and most importantly help you earn more points!
 
-In order to use the vector in a intuitive manner, we further require you to implement a few operator overloads. An example of overload "+"  is given as an example. Search how to write operator overload. The function for each operator overload is provided in the following code:
+## General Guidelines:
 
-```cpp
-class Vec {
-private:
-    float x,y;
-public:
-    Vec(float _x, float _y) {
-        x = _x; y = _y;
-    }
-    float getX() {return x;}
-    float getY() {return y;}
+1. **Read the project specification again.** Follow and understand all things mentioned in the specification. **Especially the "Introduction" part.**
+2. For those details are not mentioned in the specification. It's up to you to decide. This typically include 1)IO formats 2) Number of random vehicles in ex1 etc. 
+3. **Make comments on important aspects of your program in `README`.** These includes "How should your program be compiled". "How should we inteprete your ouput?". "What is your program's hightlights? Why do you think your program is worth more points then others?". Remember that the `README` is the only way that you can communicate with us. You will not be able to check your graded project since it will be graded after the finals.
 
-    // Example Overloads + operator
-    // returns the sum of 2 Vec
-    Vec operator+ (Vec v) { 
-        return Vec(x + v.getX(), y + v.getY());
-    }
+## How will it be graded?
 
-    // Overload - on 2 Vectors
-    // return thier difference Vector
+The project will be graded on the following aspects:
 
-    // Overload * operator on a float k
-    // return current Vector scaled by k 
+* Running Effects:
+  * This focus how is the "end result" of the code. For instance, in ex1, Is the demonstration clear and easy to understand? Is the demo consists most of common cases (e.g. is your demo code is actually "random"). In ex2, is your designed trajectory "smooth" enough? 
+* Design of structure:
+  * Is your program structured in a clean way? Are you abusing the "switch" statement? Are you copying similar code (for instance copying drawing code for Rectangle and Square). Is your program split into functions and classes? 
+  * A general rule will be, whenever you write functions longer then 50 lines, it's very likely you can split the code into smaller functions. 
+* Grammatical correctness:
+  * Can your program compile? Can your program compile with no "Warnings?"
+  * Do you remember to `delete` after `new`? Do you remember to close file?
+  * Do you use `public` member attributes? This costs heavy penalties.
+  * Is your `Vec` class **imuttable**? Your member function is not allowed to change any attribute!
+* README, highlights, and Bonus:
+  * Is your README concise yet containing all neccessary info? 
+  * Maybe you have write something worth recieving a Bonus for your creative work? Briefly discuss it in the README!
 
-    // Overload * on 2 Vectors
-    // return thier inner product (scaler product)
+## FAQs on Part I:
 
-    // Overload << on an angle
-    // return current vector rotated counter clockwise
-    // by this angle
-    
-    // Overload >> on an angle
-    // return current vector rotated clockwise 
-    // by this angle
-};
+### Q: Where does the vehicles in the simulation come from? Files or user input?
+Neither, you randomly generate them inside the programe. You should generate randomly arrived vehicles, with random type, random parking duration... etc. The program should inform the user of all neccessary attributes of the vehicle whenever a vehicle comes or leaves. 
+
+## FAQs on Part II:
+
+### Q: What is the `Vec` class? What is `operator+`?
+The `Vec` class models the mathematical vector, or equivalently the concept of mathematical "Point". It makes sense to add to vectors together. So we provide compiler the definition of "+" when the two operator of "+" are `Vec`s. This is called operator overloading. Search online how to write operator overloads. An example is provided for you. After overloading "+", the following intuitive code works.
+
+```cc
+Vec v1(1,0);
+Vec v2(1,1);
+Vec v3 = v1 + v2; //v3 is now Vec(2,1);
 ```
 
-Note you are allowed to add your own attributes and methods into this class, as long as you following rules below:
+Use `Vec` class as much as possible. Avoid directly computing coordinates!
 
-1. All attributes must be `private`
-2. The class stays immutable. Meaning no method (except for constructors) is allowed to change any attributes in any circumstances.
+### Q: Do we need to draw the trajectory in the window?
+No, you don't have to (although you can try, it's interesting to try so). However, you do need to make sure the trajectory of the car is smooth enough (No sharp turns, no spinning in one place, etc.).
 
-## The Figure base class
+### Q: Do we need to submit the class inheritance relation ship? In what form?
+Yes, but you can do this either by providing a picture of the relationship (No hand drawns!). Or you can submit a textual file, one looks like:
 
-We begin our modelling by first specifying what a graphical figure is. All figures can move, zoom, and rotate. All figures can be drawn out. It's natural to require all figures have these four methods. 
-
-To ease our further work, we assume whenever we are zooming or rotating the object, it is rotated around a "central point" of that object, called "anchor point". It's similar to the idea of "center of mass" in physics.
-
-Note that points are essentially vectors, we provide the following base class:
-
-```cpp
-class Figure () {
-protected:
-    Vec anchor;
-public:
-    Figure() : anchor(0, 0) {}
-
-    Vec getAnchor() {return anchor}
-    void setAnchor(Vec a) {anchor = a}
-
-    virtual void draw() = 0;
-    virtual void move(Vec dir) = 0;
-    virtual void rotate(float angle) = 0;
-    virtual void zoom(float k) = 0;
-
-    virtual ~Figure() {}
-} 
+```
+figure------group ------- UFO
+        |           |---- ...
+        |
+        |---coloredFig------- triangle
+        |               |---- ...
+        ...
 ```
 
-You can always add new attributes and methods into the class, as long as you follow the following rule:
+### Can we change the given class interface/inheritance relation?
+Yes, you can. **In the README file argue logically why the new one is better!** 
 
-1. All attributes must either be `private` or `protected`
-2. This rule applied to all classes derived from this base class.
+For the new inheritance relation, argue why the old inheritance relation is invalid, and why the new one more logical.
 
-Also note that your implementation of the 3 operations must be consistent. Meaning, if the user call 
-`move(Vec(3,0)); zoom(2); move(Vec(-3,0)); zoom(0.5);` subsequently，the figure should end up unchanged.
+For the class interface, you are subject to the following rule:
 
-## The Group class
+1. All member attributes cannot be `public`
+2. The `Vec` class stays immutable. 
 
-It turns out just the `Figure` class is insufficient to solve our problem. Comlicated figures are build up using smaller figures. We now seek to model a group of figures. 
-
-We begin by first noticing that "a group of figures" is itself a "Figure". Secondly, a group of figure **"has"** some figures. Naturally a group of figure could "has" another `Group`. 
-
-We give the following (incomplete) definition:
-
-```cpp
-class Group : Figure {
-private:
-    // A Group of figure "has" other figures.
-public:
-  
-    // We left out the constructor as well
-
-    void draw();      // Draw out all its figures
-    void move(Vec dir);    // Move all its figures
-    void rotate(float angle);    // Rotate the group as a whole.
-    void zoom(float k);     // Zoom the group as a whole.
-    ~Group() {}
-}
-```
-
-We leave out some detail in this class. You are required to fill in them. You can add whatever you feel neccessary into the class. 
-
-## The class relation graph:
-
-To help you set up the structure, we provided the following UML:
+### What is the use of `anchor`?
+Think of this concept as the "Frame of reference" in physics. Each figure has its own frame of reference, and the anchor vector(points) specifies where the origin of this frame of reference is. Since the object always rotate/zoom around its anchor point. Think how can you take advantage of this together with `<<` in `Vec` to simplify things.
