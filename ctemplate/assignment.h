@@ -5,9 +5,6 @@
 #ifndef CTEMPLATE_ASSIGNMENT_H
 #define CTEMPLATE_ASSIGNMENT_H
 
-#include <stdio.h>
-#include <stdlib.h>
-
 int getExerciseNumber(int argc, char* argv[]);
 /* This function gets the exercise number to run from
  * 1. programe argument (for graders)
