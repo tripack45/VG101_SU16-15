@@ -29,6 +29,8 @@ The project will be graded on the following aspects:
   * Is your README concise yet containing all neccessary info? 
   * Maybe you have write something worth recieving a Bonus for your creative work? Briefly discuss it in the README!
 
+
+
 ## FAQs on Part I:
 
 ### Q: Where does the vehicles in the simulation come from? Files or user input?
@@ -62,7 +64,7 @@ figure------group ------- UFO
         ...
 ```
 
-### Can we change the given class interface/inheritance relation?
+### Q: Can we change the given class interface/inheritance relation?
 Yes, you can. **In the README file argue logically why the new one is better!** 
 
 For the new inheritance relation, argue why the old inheritance relation is invalid, and why the new one more logical.
@@ -72,5 +74,10 @@ For the class interface, you are subject to the following rule:
 1. All member attributes cannot be `public`
 2. The `Vec` class stays immutable. 
 
-### What is the use of `anchor`?
+### Q: What is the use of `anchor`?
 Think of this concept as the "Frame of reference" in physics. Each figure has its own frame of reference, and the anchor vector(points) specifies where the origin of this frame of reference is. Since the object always rotate/zoom around its anchor point. Think how can you take advantage of this together with `<<` in `Vec` to simplify things.
+
+## Other questions
+
+### Q: Can I use "windows/MacOS" specific functions?
+Yes, but we don't suggest that. Think first if there is a way of achieving what you want without using them. If you do decided to do so. Note this and provide reasons in the README!
