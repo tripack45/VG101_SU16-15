@@ -29,8 +29,6 @@ The project will be graded on the following aspects:
   * Is your README concise yet containing all neccessary info? 
   * Maybe you have write something worth recieving a Bonus for your creative work? Briefly discuss it in the README!
 
-
-
 ## FAQs on Part I:
 
 ### Q: Where does the vehicles in the simulation come from? Files or user input?
@@ -77,7 +75,41 @@ For the class interface, you are subject to the following rule:
 ### Q: What is the use of `anchor`?
 Think of this concept as the "Frame of reference" in physics. Each figure has its own frame of reference, and the anchor vector(points) specifies where the origin of this frame of reference is. Since the object always rotate/zoom around its anchor point. Think how can you take advantage of this together with `<<` in `Vec` to simplify things.
 
+### [Aug. 1st] Q: Is there an essy way to perform rotation?
+Yes, instead of using many `arcsin` and `arctan` etc, an easy way to perform rotation is to use "rotation matrix". See [this wiki page](https://en.wikipedia.org/wiki/Rotation_matrix) for details. You can rotate a vector easily by using simple multiplication/additions.
+
 ## Other questions
 
 ### Q: Can I use "windows/MacOS" specific functions?
 Yes, but we don't suggest that. Think first if there is a way of achieving what you want without using them. If you do decided to do so. Note this and provide reasons in the README!
+
+## [Aug. 1st] Q: Can We change the setup?
+As this may surprise you, yes you can. You are allowed to change the setup, as long as you are "generalizing" the problem, or equivalently, not making the problem "easier". This is especially true for exercise 2. We encourage you to try more directions, and develop new methods.
+
+## [Aug. 1st] Q: What are the other directions that we can pursue to get bonus?
+In general, you need to identify part of the code you believe is "too complicated". Such as:
+
+* Duplicated code: code that you are writing over and over again. 
+* Long functions: functions that are longer then 50 lines.
+* Complex logic/calculation, simplify them using similar techniques as `Vec`.
+
+In particular, some ways to go in Ex.2 to get bonus are:
+
+1. Add a small flag on the car, let it move up and down while the car is driving forward.
+
+ The idea behind this is that all object are "rigid bodies" in our setup. In reality it is seldom true. A character will wave his hand when he is moving forward. Can you try and develop a good way of letting a figure has its "internel animation"?
+
+2. Very long drawing function / continuously created (destroyed) objects.
+
+In the display function of your code (the function where you instantiate and draw figures), you will implement all the animations there. The code tends to be lengthy, and the logic will be quite complex. Also note that for each frame drawn, these objects will be reateed then destroyed. That's quite a waste of time and resources. It there a good work around? 
+
+One obvious idea would be try to define object outside this function. But since this function does not take arguments, how can we pass our objects into the function? Well, you are not allowed to use global variables. 
+
+3. More complicated drawings
+
+Try to make the teleporter more complicated. Can you try to implement a polygon teleporter, with the number of sides changes with time? 
+
+4. An interactive user interface
+
+We did introduce the concept of a "function pointer" in the lecture. The technique is used in `glutTimerFunc()`. This type of code is quite common actually. It's called a `callback()` function. One very important use of callback functions are User interface, thins like buttons, text box, scrolls etc. Glut lets you draw these things in your application very easily. Try to add some interactive elements into your code. 
+
