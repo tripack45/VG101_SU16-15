@@ -95,21 +95,21 @@ In general, you need to identify part of the code you believe is "too complicate
 
 In particular, some ways to go in Ex.2 to get bonus are:
 
-1. Add a small flag on the car, let it move up and down while the car is driving forward.
+* Add a small flag on the car, let it move up and down while the car is driving forward.
 
  The idea behind this is that all object are "rigid bodies" in our setup. In reality it is seldom true. A character will wave his hand when he is moving forward. Can you try and develop a good way of letting a figure has its "internel animation"?
 
-2. Very long drawing function / continuously created (destroyed) objects.
+* Very long drawing function / continuously created (destroyed) objects.
 
 In the display function of your code (the function where you instantiate and draw figures), you will implement all the animations there. The code tends to be lengthy, and the logic will be quite complex. Also note that for each frame drawn, these objects will be reateed then destroyed. That's quite a waste of time and resources. It there a good work around? 
 
 One obvious idea would be try to define object outside this function. But since this function does not take arguments, how can we pass our objects into the function? Well, you are not allowed to use global variables. 
 
-3. More complicated drawings
+* More complicated drawings
 
 Try to make the teleporter more complicated. Can you try to implement a polygon teleporter, with the number of sides changes with time? 
 
-4. An interactive user interface
+* An interactive user interface
 
 We did introduce the concept of a "function pointer" in the lecture. The technique is used in `glutTimerFunc()`. This type of code is quite common actually. It's called a `callback()` function. One very important use of callback functions are User interface, thins like buttons, text box, scrolls etc. Glut lets you draw these things in your application very easily. Try to add some interactive elements into your code. 
 
