@@ -78,15 +78,35 @@ Think of this concept as the "Frame of reference" in physics. Each figure has it
 ### [Aug. 1st] Q: Is there an essy way to perform rotation?
 Yes, instead of using many `arcsin` and `arctan` etc, an easy way to perform rotation is to use "rotation matrix". See [this wiki page](https://en.wikipedia.org/wiki/Rotation_matrix) for details. You can rotate a vector easily by using simple multiplication/additions.
 
+
+### [Aug. 5th] Q: Is there a "criteria" for a "good" design ?
+Yes, but most of it are about "taste". A good design should be easy to use, and logical. 
+
+There does exists sort of "Minimum Requirement", that is a good design should be "consistent", for example, the implementation for `Group`:
+
+* Possible to contain (has) other `Group`. A `Group` is a `Figure`, thus logically it can be part of a bigger `Group`
+* Symmetric: if you do ask a figure 
+  
+  1.  `Move(Vec(1,0))` 
+  2.  `Zoom(3.0)` 
+  3.  `Rotate(PI / 6)`
+  4.  `Draw()` 
+  5.  `Move(Vec(-1,0))`
+  6.  `Rotate(-PI / 6)`
+  7.  `Zoom(1.0/3.0)` 
+  8.  `Draw()`. 
+  
+  Logically, the figure should be identical to the one before these operations. You should draw 2 identical figure at the same place. `Draw()` shouldn't affect the figure. The order of the operations shouldn't matter as well. Check if your implementation fits these criteria.
+
 ## Other questions
 
 ### Q: Can I use "windows/MacOS" specific functions?
 Yes, but we don't suggest that. Think first if there is a way of achieving what you want without using them. If you do decided to do so. Note this and provide reasons in the README!
 
-## [Aug. 1st] Q: Can We change the setup?
+### [Aug. 1st] Q: Can We change the setup?
 As this may surprise you, yes you can. You are allowed to change the setup, as long as you are "generalizing" the problem, or equivalently, not making the problem "easier". This is especially true for exercise 2. We encourage you to try more directions, and develop new methods.
 
-## [Aug. 1st] Q: What are the other directions that we can pursue to get bonus?
+### [Aug. 1st] Q: What are the other directions that we can pursue to get bonus?
 In general, you need to identify part of the code you believe is "too complicated". Such as:
 
 * Duplicated code: code that you are writing over and over again. 
