@@ -96,7 +96,7 @@ There does exists sort of "Minimum Requirement", that is a good design should be
   7.  `Zoom(1.0/3.0)` 
   8.  `Draw()`. 
   
-  Logically, the figure should be identical to the one before these operations. You should draw 2 identical figure at the same place. `Draw()` shouldn't affect the figure. The order of the operations shouldn't matter as well. Check if your implementation fits these criteria.
+  Logically, the figure should be identical to the one before these operations. You should draw 2 identical figure at the same place. `Draw()` shouldn't affect the figure. The order of the operations shouldn't matter (the order of these 8 operation shouldn't affect how the figure is after the 8 operations) as well. Check if your implementation fits these criteria.
 
 ## Other questions
 
