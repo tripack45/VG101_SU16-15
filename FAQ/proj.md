@@ -85,7 +85,7 @@ Yes, but most of it are about "taste". A good design should be easy to use, and 
 There does exists sort of "Minimum Requirement", that is a good design should be "consistent", for example, the implementation for `Group`:
 
 * Possible to contain (has) other `Group`. A `Group` is a `Figure`, thus logically it can be part of a bigger `Group`
-* Symmetric: if you do ask a figure 
+* Symmetric: if you do ask a `Group` (and of course any figure)
   
   1.  `Move(Vec(1,0))` 
   2.  `Zoom(3.0)` 
