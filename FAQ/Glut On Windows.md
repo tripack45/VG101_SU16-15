@@ -143,6 +143,12 @@ add_executable(project_opgl ...)
 target_link_libraries(project_opgl opengl32.lib glut32.lib glu32.lib)
 ```
 
+For `freeglut` users, you should link these librarys instead,
+
+```cmake
+target_link_libraries(project_opgl opengl32 glu32 freeglut)
+```
+
 Make sure that the project (target name) of two lines are the same.
 
 
